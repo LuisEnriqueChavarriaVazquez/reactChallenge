@@ -7,5 +7,5 @@ export const fetchBanks = async () => {
   const response = await fetch(BANKS_URL);
   const data = await response.json();
   localStorage.setItem('banks', JSON.stringify(data));
-  return data; 
+  return data;
 }
