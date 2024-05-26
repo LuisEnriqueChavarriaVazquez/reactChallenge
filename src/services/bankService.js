@@ -2,6 +2,7 @@ const BANKS_URL = "https://cors-anywhere.herokuapp.com/https://dev.obtenmas.com/
 
 export const fetchBanks = async () => {
   const storedBanks = localStorage.getItem('banks');
+  console.log('storedBanks: ', storedBanks);
   if (storedBanks) return JSON.parse(storedBanks);
 
   const response = await fetch(BANKS_URL);
