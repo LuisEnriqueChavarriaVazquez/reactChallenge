@@ -24,7 +24,7 @@ function BankIntroText() {
                         Con esto el otro lado no sabe desde donde se realizó el enlace
                     */}
                     <a href="https://dev.obtenmas.com/catom/api/challenge/banks" target="_blank" rel="noopener noreferrer">
-                        https://dev.obtenmas.com/catom/api/challenge/banks
+                        Datos de bancos
                     </a>
                 </p>
             </div>
