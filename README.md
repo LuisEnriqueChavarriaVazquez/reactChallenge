@@ -4,6 +4,12 @@
 2. [Solución a CORS](#Solución-a-cors)
 3. [Cómo ejecutar el proyecto de forma local](#cómo-correr-el-proyecto)
 
+## Acceso al proyecto
+[DEMO del challenge, de este repositorio](https://luisenriquechavarriavazquez.github.io/reactChallenge/)
+
+[Server programado para el challenge, solución de CORS](https://react-challenge-server-theta.vercel.app/)
+[Repo del Server programado para el challenge](https://github.com/LuisEnriqueChavarriaVazquez/reactChallengeServer)
+
 # Arquitectura del Proyecto
 
 Este proyecto sigue una arquitectura modular por características, diseñada para mantener el código organizado y escalable. A continuación se describen las principales características de esta arquitectura.
