@@ -17,13 +17,13 @@ function Footer() {
                         </div>
 
                         <div className="footer-container__slogan">
-                            <strong>Banco PagaTodo</strong>, es para todos.
+                            <strong>Banco Paga Todo</strong>, es para todos.
                         </div>
                     </div>
                 </div>
                 <div className="footer-container__copyright">
                     <label htmlFor="modal-copyright" className="footer-container__label">
-                        Copyright &#169; PagaTodo - <i>Todos los derechos reservados</i>
+                        Copyright &#169; Paga Todo - <i>Todos los derechos reservados</i>
                     </label>
                 </div>
             </footer>

@@ -1,16 +1,19 @@
 import React, { useContext } from "react";
 import { BankContext } from "../context/BankContext";
 
-/////////////Styles
-import "../assets/styles/main.css";
-
-
 function BankGrid() {
-	const { banks } = useContext(BankContext);
+    const { state: { banks, isLoading, error } } = useContext(BankContext);
 
-	return (
-		<React.Fragment>
-			{/* Contenedor para los grid */}
+    if (isLoading) {
+        return <div>Cargando...</div>; // Visual para carga
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>; // Manejo de errores
+    }
+
+    return (
+        <React.Fragment>
             <section className="bank-container-grid">
                 <div className="bank-container-grid__grid">
                     <div className="bank-container-grid__items">
@@ -29,9 +32,8 @@ function BankGrid() {
                     </div>
                 </div>
             </section>
-            
-		</React.Fragment>
-	);
+        </React.Fragment>
+    );
 }
 
 export default BankGrid;

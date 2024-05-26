@@ -16,7 +16,7 @@ function Navbar() {
                     </div>
 
                     <div className="navigation__slogan">
-                        <strong>Banco PagaTodo</strong>, es para todos.
+                        <strong>Banco Paga Todo</strong>, es para todos.
                     </div>
                 </div>
             </nav>
