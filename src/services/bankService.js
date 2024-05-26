@@ -1,4 +1,4 @@
-const BANKS_URL = "/catom/api/challenge/banks";
+const BANKS_URL = "/api/challenge/banks";
 
 export const fetchBanks = async () => {
   const storedBanks = localStorage.getItem('banks');
