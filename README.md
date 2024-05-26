@@ -1,7 +1,8 @@
 ## Índice
 
-1. [Estructura de Carpetas](#cómo-correr-el-proyecto)
-2. [Componentes](#arquitectura-del-royecto)
+1. [Cómo ejecutar el proyecto](#cómo-correr-el-proyecto)
+2. [Arquitectura del proyecto](#arquitectura-del-proyecto)
+3. [Solución a CORS](#Solución-a-cors)
 
 # Cómo Correr el Proyecto
 
@@ -18,8 +19,8 @@ Asegúrate de tener instalados los siguientes software en tu máquina:
 1. **Clona el repositorio:**
 
    ```
-   git clone https://github.com/tu-usuario/nombre-del-repositorio.git
-   cd nombre-del-repositorio
+   git clone https://github.com/LuisEnriqueChavarriaVazquez/reactChallenge.git
+   cd reactChallenge
    ```
 
 2. **Instala las dependencias:**
@@ -142,3 +143,9 @@ La lógica relacionada con la interacción con APIs externas está separada en l
 - **Documentación**: Documentar la estructura y responsabilidades de la aplicación es crucial, especialmente a medida que el proyecto crece.
 
 Este enfoque es recomendado para proyectos que esperan aumentar en tamaño o complejidad, proporcionando una base sólida y fácil de mantener.
+
+# Solución a CORS
+
+Para este proyecto, he implementado un servidor proxy alojado en Vercel y un cliente React alojado en GitHub Pages. El servidor proxy en Vercel (https://react-challenge-server-theta.vercel.app/) maneja las solicitudes a la API proporcionada por Paga Todo (https://dev.obtenmas.com/catom/api/challenge/banks), mientras que el cliente en GitHub Pages (https://luisenriquechavarriavazquez.github.io/reactChallenge/) consume los datos de bancos a través del proxy. Esto asegura que el cliente pueda interactuar con la API de manera segura y eficiente. Todo esto para evitar problemas de CORS.
+
+![Imagen del Proyecto](https://media.licdn.com/dms/image/D5612AQGHph0B6FKU3g/article-cover_image-shrink_600_2000/0/1712492130078?e=2147483647&v=beta&t=7WcM1i5d6y1ucEIshict3ApIkEUcNU9nu_davd7-WD8)
