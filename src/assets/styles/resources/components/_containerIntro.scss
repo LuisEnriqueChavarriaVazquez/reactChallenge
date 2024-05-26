@@ -1,3 +1,5 @@
+@use "../utilities/_colors.scss" as *;
+
 .container__swiperFather {
     width: 100vw;
     height: auto;
@@ -23,7 +25,7 @@
         box-sizing: border-box;
         border-radius: 20px;
 
-        background-color: rgb(255, 255, 255);
+        background-color: $blanco;
 
         @media (max-width: 1400px) {
             & {
@@ -68,7 +70,7 @@
             h1 {
                 font-size: 8rem;
                 margin-bottom: 1rem;
-                color: #183b28;
+                color: $verde-oscuro-2;
 
                 @media (max-width: 1600px) {
                     & {
@@ -91,7 +93,7 @@
 
             p {
                 font-size: 2.5rem;
-                color: #122e1e;
+                color: $verde-oscuro;
                 line-height: 3.5rem;
 
                 @media (max-width: 1600px) {
@@ -116,8 +118,8 @@
 
                 a {
                     text-decoration: none;
-                    color: #225739;
-                    background-color: #dadada;
+                    color: $verde-oscuro-3;
+                    background-color: $gris-light-1;
                     font-weight: 900;
                 }
             }

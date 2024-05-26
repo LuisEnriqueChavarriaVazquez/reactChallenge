@@ -1,3 +1,6 @@
+//Variables
+@use "resources/utilities/_colors.scss" as *;
+
 //Components
 @use "resources/components/_card.scss";
 @use "resources/components/_cardGrid.scss";
@@ -9,7 +12,7 @@
 
 //Utilities
 @import "resources/utilities/_functions.scss";
-@import "resources/utilities/_variables.scss";
+@import "resources/utilities/_fonts.scss";
 
 
 /////////////////////////////
@@ -30,5 +33,5 @@ html{
 /*Para desactivar el scroll horizontal*/
 html, body {
     max-width: 100%;
-    background-color: rgb(25, 46, 36);
+    background-color: $verde-oscuro;
 }

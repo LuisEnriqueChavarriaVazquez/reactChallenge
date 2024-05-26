@@ -1,10 +1,12 @@
+@use "../utilities/_colors.scss" as *;
+
 // Estilos del footer usando BEM
 .footer-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
-    background-color: #f3f3f3; // Color de fondo general del footer
+    background-color: $gris-light; // Color de fondo general del footer
 
     &__content {
         display: flex;
@@ -39,14 +41,14 @@
 
             .footer-container__slogan {
                 font-size: 16px;
-                color: #666;
+                color: $gris-dark;
             }
         }
     }
 
     &__copyright {
         font-size: 14px;
-        color: #999;
+        color: $gris-dark;
         text-align: center;
         padding: 10px 0;
 

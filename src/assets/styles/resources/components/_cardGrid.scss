@@ -1,3 +1,5 @@
+@use "../utilities/_colors.scss" as *;
+
 .bank-container-grid {
     width: 100vw;
     height: auto;
@@ -17,7 +19,7 @@
         box-sizing: border-box;
         border-radius: 20px;
 
-        background-color: rgb(255, 255, 255);
+        background-color: $blanco;
 
         @media (max-width: 1600px) {
             & {
@@ -74,7 +76,7 @@
                 position: relative;
                 width: 100%;
                 height: 160px;
-                background-color: #dfdfdf;
+                background-color: $gris-light;
                 border-radius: 10px;
                 box-shadow:
                     0 1px 3px rgba(0, 0, 0, 0.12),
@@ -110,7 +112,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background-color: rgb(194, 194, 194);
+                    background-color: $gris-light-1;
                     border-radius: 10px 0 0 10px;
 
                     @media (max-width: 600px) {
@@ -223,8 +225,8 @@
                         align-items: center;
                         font-size: 1.8rem;
                         font-weight: 900;
-                        background-color: #0b2417;
-                        color: #ffffff;
+                        background-color: $verde-oscuro;
+                        color: $blanco;
                         border-radius: 0 0 10px 0;
                         padding-right: 10px;
 
