@@ -1,0 +1,44 @@
+.navigation {
+    background-color: #fff; // Color de fondo de la barra de navegación
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra para darle profundidad
+    padding: 1rem 2rem; // Padding horizontal
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+  
+    .navigation__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto; // Centra el contenedor en la página
+    }
+  
+    .navigation__brand {
+      display: flex;
+      align-items: center;
+  
+      .navigation__logo {
+        width: 60px;
+        height: 60px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50px; // Hace que el logo sea redondo
+        margin-right: 10px; // Espacio entre el logo y el nombre de la empresa
+      }
+  
+      .navigation__name {
+        font-size: 2.25rem;
+        color: #333;
+        font-weight: bold;
+      }
+    }
+  
+    .navigation__slogan {
+      font-size: 1.8rem;
+      color: #666;
+      text-align: right;
+    }
+  }
+  

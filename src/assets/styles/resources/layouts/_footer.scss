@@ -1,0 +1,57 @@
+// Estilos del footer usando BEM
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f3f3f3; // Color de fondo general del footer
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__icon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .footer-container__icon-text {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                .footer-container__icon {
+                    width: 50px;
+                    height: 50px;
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 25px;
+                }
+
+                .footer-container__text {
+                    font-size: 18px;
+                    color: #333;
+                    margin-left: 10px;
+                }
+            }
+
+            .footer-container__slogan {
+                font-size: 16px;
+                color: #666;
+            }
+        }
+    }
+
+    &__copyright {
+        font-size: 14px;
+        color: #999;
+        text-align: center;
+        padding: 10px 0;
+
+        &__label {
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.container__swiperFather {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12rem 0 0 0;
+    
+    .container__swiper {
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        grid-template-rows: auto;
+
+        width: 80vw;
+        height: auto;
+        padding: 4rem 2rem 4rem 15rem;
+        box-sizing: border-box;
+        border-radius: 20px;
+
+        background-color: rgb(255, 255, 255);
+
+        .container__swiper__textIntro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h1 {
+                font-size: 8rem;
+                margin-bottom: 1rem;
+                color: #183b28;
+            }
+
+            p {
+                font-size: 2.5rem;
+                color: #122e1e;
+                line-height: 3.5rem;
+
+                a {
+                    text-decoration: none;
+                    color: #225739;
+                    background-color: #dadada;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}

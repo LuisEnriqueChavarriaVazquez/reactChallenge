@@ -1,0 +1,26 @@
+
+//Nuevo codigo para los colores
+@function generate-pastel-color($index) {
+  $base-hue: 150deg; // Puedes ajustar el tono base según tu preferencia
+  $lightness: 20%; // Puedes ajustar la luminosidad base según tu preferencia
+
+  // Calcular el tono para el índice dado
+  $hue: $base-hue + ($index * 3deg);
+
+  // Generar el color en formato HSL con luminosidad
+  $color: hsl($hue, 70%, $lightness);
+
+  // Convertir HSL a RGB
+  $red: red($color);
+  $green: green($color);
+  $blue: blue($color);
+
+  @return rgb($red, $green, $blue);
+}
+
+// Generar estilos para 100 elementos
+@for $i from 1 through 100 {
+  .swiper__slide:nth-child(#{$i}n) {
+    background-color: generate-pastel-color($i);
+  }
+}

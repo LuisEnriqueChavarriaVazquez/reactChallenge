@@ -1,16 +1,20 @@
 import React from 'react';
 import { BankProvider } from './context/BankContext';
 import BankList from './components/BankList';
-import './styles/app.css'; // Asegúrate de que el nombre de archivo coincida con tu estructura de proyecto
+import BankGrid from './components/BankGrid';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
       {/* Envuelve los componentes que necesitan acceso al estado de los bancos con BankProvider */}
+      <Navbar/>
       <BankProvider>
-        <h1>Lista de Bancos</h1>
         <BankList />
+        <BankGrid />
       </BankProvider>
+      <Footer/>
     </div>
   );
 }

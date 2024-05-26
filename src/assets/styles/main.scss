@@ -1,0 +1,34 @@
+//Components
+@use "resources/components/_card.scss";
+@use "resources/components/_cardGrid.scss";
+@use "resources/components/_containerIntro.scss";
+
+//Layouts
+@use "resources/layouts/_navbar.scss";
+@use "resources/layouts/_footer.scss";
+
+//Utilities
+@import "resources/utilities/_functions.scss";
+@import "resources/utilities/_variables.scss";
+
+
+/////////////////////////////
+//Generales
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+    font-family: $font-primary;
+}
+
+html{
+    font-size: 62.5% !important;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/*Para desactivar el scroll horizontal*/
+html, body {
+    max-width: 100%;
+    background-color: rgb(25, 46, 36);
+}
