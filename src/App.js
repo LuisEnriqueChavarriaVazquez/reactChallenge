@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BankProvider } from './context/BankContext';
+import BankList from './components/BankList';
+import './styles/app.css'; // Asegúrate de que el nombre de archivo coincida con tu estructura de proyecto
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Envuelve los componentes que necesitan acceso al estado de los bancos con BankProvider */}
+      <BankProvider>
+        <h1>Lista de Bancos</h1>
+        <BankList />
+      </BankProvider>
     </div>
   );
 }
