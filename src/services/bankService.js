@@ -1,4 +1,4 @@
-const BANKS_URL = "/catom/api/challenge/banks";
+const BANKS_URL = "https://cors-anywhere.herokuapp.com/https://dev.obtenmas.com/catom/api/challenge/banks";
 
 export const fetchBanks = async () => {
   const storedBanks = localStorage.getItem('banks');
@@ -7,5 +7,5 @@ export const fetchBanks = async () => {
   const response = await fetch(BANKS_URL);
   const data = await response.json();
   localStorage.setItem('banks', JSON.stringify(data));
-  return data;
+  return data; 
 }
