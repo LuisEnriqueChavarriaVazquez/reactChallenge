@@ -1,4 +1,4 @@
-import { fetchBanks } from '../src/services/bankService';  // Asegúrate de que la ruta al archivo es correcta
+import { fetchBanks } from '../src/services/bankService'; // Asegúrate de que la ruta al archivo es correcta
 import fetchMock from 'jest-fetch-mock';
 
 fetchMock.enableMocks();
@@ -6,35 +6,30 @@ fetchMock.enableMocks();
 describe('fetchBanks', () => {
   beforeEach(() => {
     fetchMock.resetMocks();
-
-    // Mockear localStorage
-    jest.spyOn(window.localStorage.__proto__, 'getItem');
-    jest.spyOn(window.localStorage.__proto__, 'setItem');
-    window.localStorage.__proto__.getItem = jest.fn();
-    window.localStorage.__proto__.setItem = jest.fn();
+    localStorage.clear(); // Limpia el almacenamiento local antes de cada prueba
   });
 
   afterEach(() => {
-    jest.restoreAllMocks(); // Restaurar mocks después de cada prueba
+    jest.restoreAllMocks(); // Restaura los mocks después de cada prueba
   });
 
   it('uses cached data if not older than 24 hours', async () => {
     const fakeData = [{ id: 1, name: 'Bank One' }];
     const fakeDataStr = JSON.stringify(fakeData);
-    localStorage.getItem.mockImplementation((key) => {
-      if (key === 'banks') return fakeDataStr;
-      if (key === 'lastFetch') return new Date().toISOString();  // fecha reciente para prueba
-    });
+    localStorage.setItem('banks', fakeDataStr);
+    localStorage.setItem('lastFetch', new Date().toISOString());
 
     const data = await fetchBanks();
     expect(data).toEqual(fakeData);
     expect(localStorage.getItem).toHaveBeenCalledWith('banks');
     expect(localStorage.getItem).toHaveBeenCalledWith('lastFetch');
-    expect(fetchMock).not.toHaveBeenCalled();  // No hace llamada a la API
+    expect(fetchMock).not.toHaveBeenCalled(); // No hace llamada a la API
   });
 
   it('fetches data from the API when no cached data', async () => {
-    localStorage.getItem.mockImplementation(() => null);
+    localStorage.setItem('banks', null);
+    localStorage.setItem('lastFetch', null);
+
     const apiData = [{ id: 2, name: 'Bank Two' }];
     fetchMock.mockResponseOnce(JSON.stringify(apiData));
 
@@ -46,9 +41,9 @@ describe('fetchBanks', () => {
   });
 
   it('throws an error when the API call fails', async () => {
-    localStorage.getItem.mockImplementation(() => null);
-    fetchMock.mockResponseOnce('', { status: 404 });
+    fetchMock.mockRejectOnce(new Error('API is down'));
 
-    await expect(fetchBanks()).rejects.toThrow('HTTP error! Status: 404');
+    await expect(fetchBanks()).rejects.toThrow('API is down');
+    expect(localStorage.getItem('banks')).toBeNull();
   });
 });

@@ -1,5 +1,6 @@
 module.exports = {
-  setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect", "jest-fetch-mock"],
+  setupFiles: ["jest-localstorage-mock"],
+  setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect", "jest-fetch-mock", "jest-fetch-mock/setupJest"],
   testEnvironment: "jsdom",
   transform: {
     "^.+\\.(js|jsx)$": "babel-jest"  // Solo babel-jest debería estar aquí
@@ -10,5 +11,5 @@ module.exports = {
 	"\\.(jpg|jpeg|png|gif|svg)$": "<rootDir>/__mocks__/fileMock.js",
   },
   transformIgnorePatterns: ["node_modules/(?!(swiper|ssr-window|dom7)/)"],
-  testMatch: ["**/UnitaryTest/**/*.test.js"]  // Asegúrate de que tus archivos de prueba sigan este patrón
+  testMatch: ["**/Test/**/*.test.js"]  // Asegúrate de que tus archivos de prueba sigan este patrón
 };
