@@ -8,6 +8,45 @@
 .swiper {
   width: 45rem;
   height: 55rem;
+
+  @media (max-width: 1400px) {
+    & {
+      width: 40rem;
+      height: 45rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    & {
+      width: 30rem;
+      height: 45rem;
+    }
+  }
+
+  @media (max-width: 450px) {
+    & {
+      width: 25rem;
+      height: 40rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    & {
+      width: 23rem;
+    }
+  }
+
+  @media (max-width: 340px) {
+    & {
+      width: 20rem;
+    }
+  }
+
+  @media (max-width: 310px) {
+    & {
+      width: 18rem;
+    }
+  }
 }
 
 .swiper__slide {
@@ -21,53 +60,112 @@
   font-weight: bold;
   color: #fff;
 
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
+
+  @media (max-width: 1400px) {
+    & {
+      grid-template-rows: 8rem 5rem 5rem 22rem;
+    }
+  }
 
   .swiper__title,
   .swiper__description,
-  .swiper__container, 
-  .swiper__age{
+  .swiper__container,
+  .swiper__age {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
   }
 
-  .swiper__title{
+  .swiper__title {
     background-color: #d8d8d8;
     color: #153f23;
     font-size: 4rem;
     height: 8rem;
+
+    @media (max-width: 600px) {
+      & {
+        font-size: 3.5rem;
+      }
+    }
+
+    @media (max-width: 450px) {
+      & {
+        font-size: 2.5rem;
+      }
+    }
   }
 
   .swiper__description,
-  .swiper__age{
+  .swiper__age {
     background-color: #12331d;
     color: #d8d8d8;
     height: 5rem;
   }
 
-  .swiper__description{
+  .swiper__description {
     font-size: 1.6rem;
+
+    @media (max-width: 600px) {
+      & {
+        padding: 0 10px;
+        font-size: 1.4rem;
+      }
+    }
+
+    @media (max-width: 450px) {
+      & {
+        font-size: 1.3rem;
+      }
+    }
   }
 
-  .swiper__age{
+  .swiper__age {
     font-size: 1.5rem;
   }
 
-  .swiper__container{
+  .swiper__container {
     width: 100%;
     height: 38rem;
 
-    .swiper__image{
+    @media (max-width: 1400px) {
+      & {
+        height: 22rem;
+      }
+    }
+
+    @media (max-width: 450px) {
+      & {
+        height: 17rem;
+      }
+    }
+
+    .swiper__image {
       position: relative;
       width: 300px;
       height: 300px;
       border-radius: 2rem;
-      
+
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
+
+      @media (max-width: 1400px) {
+        & {
+          width: 170px;
+          height: 170px;
+        }
+      }
+
+      @media (max-width: 450px) {
+        & {
+          width: 130px;
+          height: 130px;
+        }
+      }
     }
   }
 }
