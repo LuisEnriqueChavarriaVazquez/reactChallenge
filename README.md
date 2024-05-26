@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Arquitectura del Proyecto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto sigue una arquitectura modular por características, diseñada para mantener el código organizado y escalable. A continuación se describen las principales características de esta arquitectura.
 
-## Available Scripts
+## Estructura de Carpetas
 
-In the project directory, you can run:
+La estructura del proyecto se organiza de la siguiente manera:
 
-### `npm start`
+/src
+|-- /assets
+|-- /components
+|-- BankGrid.js
+|-- BankIntroText.js
+|-- BankList.js
+|-- Footer.js
+|-- Navbar.js
+|-- /context
+|-- BankContext.js
+|-- /services
+|-- bankService.js
+|-- App.js
+|-- App.test.js
+|-- index.js
+|-- reportWebVitals.js
+|-- setupTests.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Componentes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Todos los componentes visuales están ubicados en la carpeta `/components`. Cada componente tiene su propio archivo, facilitando la reutilización y el mantenimiento.
 
-### `npm test`
+### Context
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+El manejo del estado global se realiza a través del Context API de React, centralizado en la carpeta `/context`. Esto permite compartir estados entre varios componentes sin necesidad de prop drilling.
 
-### `npm run build`
+### Servicios
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+La lógica relacionada con la interacción con APIs externas está separada en la carpeta `/services`, manteniendo así la lógica de negocios desacoplada de la UI.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Ventajas de la Arquitectura
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Separación de Preocupaciones**: Facilita la comprensión y el mantenimiento del código al mantener cada parte del sistema claramente separada.
+- **Reutilización**: Facilita la reutilización de componentes en diferentes partes de la aplicación.
+- **Escalabilidad**: Simplifica la adición de nuevas características con mínimo impacto en el resto del sistema.
+- **Mantenibilidad**: Permite realizar actualizaciones en partes específicas del sistema sin afectar otras áreas.
 
-### `npm run eject`
+## Consideraciones
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Consistencia**: Es esencial mantener una consistencia en cómo se organizan y se nombran los archivos para facilitar la navegación a cualquier desarrollador.
+- **Documentación**: Documentar la estructura y responsabilidades de la aplicación es crucial, especialmente a medida que el proyecto crece.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este enfoque es recomendado para proyectos que esperan aumentar en tamaño o complejidad, proporcionando una base sólida y fácil de mantener.
