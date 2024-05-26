@@ -1,68 +1,8 @@
 ## Índice
 
-1. [Cómo ejecutar el proyecto](#cómo-correr-el-proyecto)
-2. [Arquitectura del proyecto](#arquitectura-del-proyecto)
-3. [Solución a CORS](#Solución-a-cors)
-
-# Cómo Correr el Proyecto
-
-Sigue los pasos a continuación para configurar y ejecutar el proyecto en tu entorno local.
-
-### Prerrequisitos
-
-Asegúrate de tener instalados los siguientes software en tu máquina:
-- Node.js (versión 14.x o superior)
-- npm (versión 6.x o superior)
-
-### Instalación
-
-1. **Clona el repositorio:**
-
-   ```
-   git clone https://github.com/LuisEnriqueChavarriaVazquez/reactChallenge.git
-   cd reactChallenge
-   ```
-
-2. **Instala las dependencias:**
-
-   ```
-   npm run install
-   ```
-
-### Ejecutar el Proyecto en Desarrollo
-
-Para iniciar el servidor de desarrollo, ejecuta el siguiente comando:
-
-```
-npm run start
-```
-
-Esto iniciará la aplicación en modo de desarrollo. Abre [http://localhost:3000](http://localhost:3000) para ver la aplicación en tu navegador. La página se recargará automáticamente si realizas cambios en el código.
-
-### Ejecutar Pruebas
-
-Para ejecutar las pruebas unitarias, usa el siguiente comando:
-
-```
-npm run test
-```
-
-Esto ejecutará todas las pruebas definidas en la carpeta `npm run test` utilizando Jest.
-
-### Construir el Proyecto
-
-Para construir la aplicación para producción, ejecuta el siguiente comando:
-
-```
-npm run build
-```
-
-Esto crea una versión optimizada de la aplicación en la carpeta `build`.
-
-### Configuración Adicional
-
-- **Configuración de Jest**: Si necesitas configurar Jest para pruebas adicionales, puedes modificar el archivo `jest.config.js` según tus necesidades.
-- **Variables de Entorno**: Puedes configurar variables de entorno creando un archivo `.env` en la raíz del proyecto.
+1. [Arquitectura del proyecto](#arquitectura-del-proyecto)
+2. [Solución a CORS](#Solución-a-cors)
+3. [Cómo ejecutar el proyecto de forma local](#cómo-correr-el-proyecto)
 
 # Arquitectura del Proyecto
 
@@ -149,3 +89,63 @@ Este enfoque es recomendado para proyectos que esperan aumentar en tamaño o com
 Para este proyecto, he implementado un servidor proxy alojado en Vercel y un cliente React alojado en GitHub Pages. El servidor proxy en Vercel (https://react-challenge-server-theta.vercel.app/) maneja las solicitudes a la API proporcionada por Paga Todo (https://dev.obtenmas.com/catom/api/challenge/banks), mientras que el cliente en GitHub Pages (https://luisenriquechavarriavazquez.github.io/reactChallenge/) consume los datos de bancos a través del proxy. Esto asegura que el cliente pueda interactuar con la API de manera segura y eficiente. Todo esto para evitar problemas de CORS.
 
 ![Imagen del Proyecto](https://media.licdn.com/dms/image/D5612AQGHph0B6FKU3g/article-cover_image-shrink_600_2000/0/1712492130078?e=2147483647&v=beta&t=7WcM1i5d6y1ucEIshict3ApIkEUcNU9nu_davd7-WD8)
+
+# Cómo Correr el Proyecto
+
+Sigue los pasos a continuación para configurar y ejecutar el proyecto en tu entorno local.
+
+### Prerrequisitos
+
+Asegúrate de tener instalados los siguientes software en tu máquina:
+- Node.js (versión 14.x o superior)
+- npm (versión 6.x o superior)
+
+### Instalación
+
+1. **Clona el repositorio:**
+
+   ```
+   git clone https://github.com/LuisEnriqueChavarriaVazquez/reactChallenge.git
+   cd reactChallenge
+   ```
+
+2. **Instala las dependencias:**
+
+   ```
+   npm run install
+   ```
+
+### Ejecutar el Proyecto en Desarrollo
+
+Para iniciar el servidor de desarrollo, ejecuta el siguiente comando:
+
+```
+npm run start
+```
+
+Esto iniciará la aplicación en modo de desarrollo. Abre [http://localhost:3000](http://localhost:3000) para ver la aplicación en tu navegador. La página se recargará automáticamente si realizas cambios en el código.
+
+### Ejecutar Pruebas
+
+Para ejecutar las pruebas unitarias, usa el siguiente comando:
+
+```
+npm run test
+```
+
+Esto ejecutará todas las pruebas definidas en la carpeta `npm run test` utilizando Jest.
+
+### Construir el Proyecto
+
+Para construir la aplicación para producción, ejecuta el siguiente comando:
+
+```
+npm run build
+```
+
+Esto crea una versión optimizada de la aplicación en la carpeta `build`.
+
+### Configuración Adicional
+
+- **Configuración de Jest**: Si necesitas configurar Jest para pruebas adicionales, puedes modificar el archivo `jest.config.js` según tus necesidades.
+- **Variables de Entorno**: Puedes configurar variables de entorno creando un archivo `.env` en la raíz del proyecto.
