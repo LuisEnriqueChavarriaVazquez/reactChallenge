@@ -1,13 +1,13 @@
 // URL del servidor desde donde se obtendrán los datos de los bancos.
-//const BANKS_URL = "https://react-challenge-server-theta.vercel.app/";
-const BANKS_URL = "https://dev.obtenmas.com/catom/api/challenge/banks";
+const BANKS_URL = "https://react-challenge-server-theta.vercel.app/";
+//const BANKS_URL = "https://dev.obtenmas.com/catom/api/challenge/banks";
 
 /**
  * Función asincrónica para obtener los datos de los bancos.
  * Se intentará usar los datos almacenados localmente para evitar llamadas innecesarias a la API.
  * Si los datos no están disponibles o están desactualizados, se realizará una solicitud a la API.
  */
-export const fetchBanks = async () => {
+export const fetchBanks = async () => { 
     try {
       // Intenta recuperar los datos de los bancos desde el almacenamiento local.
       const storedBanks = localStorage.getItem('banks');
