@@ -1,4 +1,4 @@
-const BANKS_URL = "https://react-challenge-server-dr42v1l3c-cuenta-movils-projects.vercel.app/";
+const BANKS_URL = "https://react-challenge-server-dr42v1l3c-cuenta-movils-projects.vercel.app/api/proxy";
 
 export const fetchBanks = async () => {
     const storedBanks = localStorage.getItem('banks');
