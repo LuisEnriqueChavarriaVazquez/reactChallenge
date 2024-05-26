@@ -6,13 +6,16 @@ import { fetchBanks } from '../src/services/bankService'; // Asegúrate de que l
 // Mockear la función fetchBanks
 jest.mock('../src/services/bankService');
 
+// Datos simulados para la prueba
 const mockData = [{ id: 1, name: 'Bank One' }];
 
 describe('BankProvider', () => {
+  // Restablecer el mock antes de cada prueba
   beforeEach(() => {
     fetchBanks.mockReset();
   });
 
+  // Prueba para verificar que se muestra el estado de carga inicialmente
   it('renders loading state initially', () => {
     fetchBanks.mockResolvedValueOnce(mockData);
 
@@ -28,9 +31,11 @@ describe('BankProvider', () => {
       </BankProvider>
     );
 
+    // Verifica que el texto "Loading..." esté en el documento
     expect(screen.getByText('Loading...')).toBeInTheDocument();
   });
 
+  // Prueba para verificar que se renderizan los bancos después de obtener los datos
   it('renders banks after fetching data', async () => {
     fetchBanks.mockResolvedValueOnce(mockData);
 
@@ -48,11 +53,13 @@ describe('BankProvider', () => {
       </BankProvider>
     );
 
+    // Espera hasta que se renderice el banco simulado y verifica su presencia
     await waitFor(() => {
       expect(screen.getByText('Bank One')).toBeInTheDocument();
     });
   });
 
+  // Prueba para verificar que se muestra un mensaje de error cuando la obtención de datos falla
   it('renders error message when fetch fails', async () => {
     fetchBanks.mockRejectedValueOnce(new Error('Failed to fetch'));
 
@@ -68,6 +75,7 @@ describe('BankProvider', () => {
       </BankProvider>
     );
 
+    // Espera hasta que se renderice el mensaje de error y verifica su presencia
     await waitFor(() => {
       expect(screen.getByText('Error: Failed to fetch')).toBeInTheDocument();
     });

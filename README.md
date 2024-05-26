@@ -1,3 +1,68 @@
+## Índice
+
+1. [Estructura de Carpetas](#cómo-correr-el-proyecto)
+2. [Componentes](#arquitectura-del-royecto)
+
+# Cómo Correr el Proyecto
+
+Sigue los pasos a continuación para configurar y ejecutar el proyecto en tu entorno local.
+
+### Prerrequisitos
+
+Asegúrate de tener instalados los siguientes software en tu máquina:
+- Node.js (versión 14.x o superior)
+- npm (versión 6.x o superior)
+
+### Instalación
+
+1. **Clona el repositorio:**
+
+   ```
+   git clone https://github.com/tu-usuario/nombre-del-repositorio.git
+   cd nombre-del-repositorio
+   ```
+
+2. **Instala las dependencias:**
+
+   ```
+   npm run install
+   ```
+
+### Ejecutar el Proyecto en Desarrollo
+
+Para iniciar el servidor de desarrollo, ejecuta el siguiente comando:
+
+```
+npm run start
+```
+
+Esto iniciará la aplicación en modo de desarrollo. Abre [http://localhost:3000](http://localhost:3000) para ver la aplicación en tu navegador. La página se recargará automáticamente si realizas cambios en el código.
+
+### Ejecutar Pruebas
+
+Para ejecutar las pruebas unitarias, usa el siguiente comando:
+
+```
+npm run test
+```
+
+Esto ejecutará todas las pruebas definidas en la carpeta `npm run test` utilizando Jest.
+
+### Construir el Proyecto
+
+Para construir la aplicación para producción, ejecuta el siguiente comando:
+
+```
+npm run build
+```
+
+Esto crea una versión optimizada de la aplicación en la carpeta `build`.
+
+### Configuración Adicional
+
+- **Configuración de Jest**: Si necesitas configurar Jest para pruebas adicionales, puedes modificar el archivo `jest.config.js` según tus necesidades.
+- **Variables de Entorno**: Puedes configurar variables de entorno creando un archivo `.env` en la raíz del proyecto.
+
 # Arquitectura del Proyecto
 
 Este proyecto sigue una arquitectura modular por características, diseñada para mantener el código organizado y escalable. A continuación se describen las principales características de esta arquitectura.
@@ -7,8 +72,21 @@ Este proyecto sigue una arquitectura modular por características, diseñada par
 La estructura del proyecto se organiza de la siguiente manera:
 
 ```plaintext
+__mocks__/
+├── fileMock.js
+├── styleMock.js
+└── swiperReactMock.js
+build/
+node_modules/
+public/
 src/
 ├── assets/
+│   ├── img/
+│   └── styles/
+│       ├── resources/
+│       ├── main.css
+│       ├── main.css.map
+│       └── main.scss
 ├── components/
 │   ├── BankGrid.js
 │   ├── BankIntroText.js
@@ -20,10 +98,23 @@ src/
 ├── services/
 │   └── bankService.js
 ├── App.js
-├── App.test.js
 ├── index.js
 ├── reportWebVitals.js
 └── setupTests.js
+Test/
+├── app.test.js
+├── bankContext.test.js
+├── bankGrid.test.js
+├── bankIntroText.test.js
+├── bankList.test.js
+├── bankService.test.js
+├── footer.test.js
+└── navbar.test.js
+.gitignore
+jest.config.js
+package-lock.json
+package.json
+README.md
 ```
 
 ### Componentes
