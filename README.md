@@ -6,23 +6,25 @@ Este proyecto sigue una arquitectura modular por características, diseñada par
 
 La estructura del proyecto se organiza de la siguiente manera:
 
+```plaintext
 src/
 ├── assets/
 ├── components/
-│ ├── BankGrid.js
-│ ├── BankIntroText.js
-│ ├── BankList.js
-│ ├── Footer.js
-│ └── Navbar.js
+│   ├── BankGrid.js
+│   ├── BankIntroText.js
+│   ├── BankList.js
+│   ├── Footer.js
+│   └── Navbar.js
 ├── context/
-│ └── BankContext.js
+│   └── BankContext.js
 ├── services/
-│ └── bankService.js
+│   └── bankService.js
 ├── App.js
 ├── App.test.js
 ├── index.js
 ├── reportWebVitals.js
 └── setupTests.js
+```
 
 ### Componentes
 
