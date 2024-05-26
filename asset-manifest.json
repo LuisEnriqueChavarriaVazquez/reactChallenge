@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/reactChallenge/static/css/main.31d6cfe0.css",
-    "main.js": "/reactChallenge/static/js/main.4ff89e0c.js",
+    "main.js": "/reactChallenge/static/js/main.86154d11.js",
     "static/js/453.348ef678.chunk.js": "/reactChallenge/static/js/453.348ef678.chunk.js",
     "index.html": "/reactChallenge/index.html",
-    "main.4ff89e0c.js.map": "/reactChallenge/static/js/main.4ff89e0c.js.map",
+    "main.86154d11.js.map": "/reactChallenge/static/js/main.86154d11.js.map",
     "453.348ef678.chunk.js.map": "/reactChallenge/static/js/453.348ef678.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.4ff89e0c.js"
+    "static/js/main.86154d11.js"
   ]
 }
